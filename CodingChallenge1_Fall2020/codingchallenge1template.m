@@ -72,9 +72,9 @@ AltitudeUncertainty = 0.05; % [m]
 
 %               Model
 %    P_est =   P_s * e^(-k*h)               
-%    Assume P_s is 101.7 ± 0.4 kPa and k is 1.2*10^(-4) [1/m] 
+%    Assume P_s is 101.7 Â± 0.4 kPa and k is 1.2*10^(-4) [1/m] 
 
-P_s = 101.7;       % ± 0.4 [kPa]
+P_s = 101.7;       % Â± 0.4 [kPa]
 k = 1.2*10^(-4);   % [1/m]
 
 P_est = 0;
@@ -86,7 +86,7 @@ P_sig = 0;
 %    the average pressure with the it's standard error of the mean from the data.
 
 results  = table(P_est,P_sig);
-P_data = [num2str(mean_p) '  ±  ' num2str(sem_p) '   kPa'];
+P_data = [num2str(mean_p) '  Â±  ' num2str(sem_p) '   kPa'];
 disp(results);
 disp(P_data);
 
@@ -94,6 +94,9 @@ disp(P_data);
 % model agrees with the measurements 
 
 disp('Model Discussion: (Write Your Answer Here) ')
+
+%This model isn't very acurate overall, as it agrees with the lower end values of the data given itself. 
+%But the models uncertanty is much much lower than the discrepancy between that data points themeslves.
 
 %% Bonus
 %   Repeat steps 4-6, but assume the altitude measurements were taken on a
